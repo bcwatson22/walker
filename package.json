@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "dragdealer": "0.10.0",
     "imagemin-webpack-plugin": "2.1.5",
     "intersection-observer": "0.5.0",
     "v-lazy-image": "1.2.2",

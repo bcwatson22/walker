@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <section class="wrapper">
-      <!-- <Header/> -->
+      <Header/>
 
       <main>
+        <Landing/>
+        <Transformations/>
         <!-- <router-view></router-view> -->
       </main>
 
@@ -15,6 +17,8 @@
 
 <script>
   import Header from './components/_common/Header.vue';
+  import Landing from './components/_common/Landing.vue';
+  import Transformations from './components/_common/Transformations.vue';
   import Footer from './components/_common/Footer.vue';
   import CookieBanner from './components/_common/CookieBanner.vue';
 
@@ -27,6 +31,8 @@
     name: 'app',
     components: {
       Header,
+      Landing,
+      Transformations,
       Footer,
       CookieBanner
     },

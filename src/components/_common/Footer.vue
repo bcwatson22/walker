@@ -4,7 +4,7 @@
       <small>&copy;{{ year }}. All rights reserved.</small>
     </section>
     <router-link to="/projects" class="logo">
-      <img src="./../../assets/images/global/logo-white.svg" alt="Billy Watson logo">
+      <img src="./../../assets/images/global/bw-logo-white.svg" alt="Billy Watson logo">
     </router-link>
   </footer>
 </template>
