@@ -1,0 +1,29 @@
+@import 'mixins';
+
+#app {
+  will-change: padding;
+  transition: all 0.3s ease;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.wrapper,
+.inner {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+main {
+  padding: 0 30px;
+}
