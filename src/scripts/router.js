@@ -6,9 +6,9 @@ Vue.use(Router);
 const router = new Router({
   mode: 'history',
   routes: [
-    { path: '*',
-      redirect: '/projects'
-    }
+    // { path: '*',
+    //   redirect: '/'
+    // }
   ]
 });
 

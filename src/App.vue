@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <section class="wrapper">
-      <Header/>
+      <!-- <Header/> -->
 
       <main>
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
       </main>
 
-      <Footer :year="copyrightYear"/>
+      <!-- <Footer :year="copyrightYear"/> -->
     </section>
-    <CookieBanner v-if="cookieBanner"/>
+    <!-- <CookieBanner v-if="cookieBanner"/> -->
   </div>
 </template>
 
@@ -56,17 +56,17 @@
     },
     mounted () {
 
-      let $root = document.getElementById('app'),
-          $banner = $root.querySelectorAll('.cookie-banner')[0],
-          height = '0';
-
-      if ($banner) {
-
-        height = $banner.offsetHeight.toString();
-
-        $root.style.paddingBottom = height + 'px';
-
-      }
+      // let $root = document.getElementById('app'),
+      //     $banner = $root.querySelectorAll('.cookie-banner')[0],
+      //     height = '0';
+      //
+      // if ($banner) {
+      //
+      //   height = $banner.offsetHeight.toString();
+      //
+      //   $root.style.paddingBottom = height + 'px';
+      //
+      // }
 
     }
   }
