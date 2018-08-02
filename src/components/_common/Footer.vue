@@ -1,10 +1,13 @@
 <template>
   <footer class="group">
     <section class="small-print">
-      <small>&copy;{{ year }}. All rights reserved.</small>
+      <div class="small-print">
+        <small>&copy;2018. All rights reserved.</small>
+        <small>Website by <a href="http://www.billywatson.net">billywatson.net</a>.</small>
+      </div>
     </section>
     <router-link to="/projects" class="logo">
-      <img src="./../../assets/images/global/bw-logo-white.svg" alt="Billy Watson logo">
+      <img src="./../../assets/images/global/bw-logo-black.svg" alt="Billy Watson logo">
     </router-link>
   </footer>
 </template>

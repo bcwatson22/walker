@@ -5,8 +5,7 @@
       <img :src="require('./../../assets/images/transformation/' + reveal + '.jpg')" alt="blah" class="reveal">
     </div>
     <div :id="'slider-' + initial.substring(0, 1)" class="dragdealer">
-      <div class="handle red-bar">drag me</div>
-      <p class="value">0</p>
+      <div class="handle"><span>Handle</span></div>
     </div>
   </article>
 </template>
@@ -26,16 +25,16 @@
 
       let slider = 'slider-' + this.initial.substring(0, 1),
           $slider = document.getElementById(slider),
-          $value = $slider.querySelectorAll('.value')[0],
           $parent = this.getClosest($slider, '.transformation'),
           $reveal = $parent.querySelectorAll('.reveal')[0];
 
       new Dragdealer(slider, {
 
-        animationCallback: function(x) {
+        animationCallback: function (x) {
 
           $reveal.style.opacity = x.toFixed(2);
-          $value.innerHTML = x.toFixed(2);
+
+          (x > 0.1) ? $slider.classList.add('touched') : $slider.classList.remove('touched');
 
         }
 
@@ -46,13 +45,17 @@
 </script>
 
 <style lang="scss" scoped>
+  @import './../../assets/styles/sass/_variables.scss';
+  @import './../../assets/styles/sass/_mixins.scss';
+
   .transformation {
     width: calc(50% - 24px);
+    margin-bottom: 48px;
   }
 
   .image-holder {
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
   }
 
   .reveal {
@@ -62,8 +65,64 @@
     will-change: opacity;
   }
 
+  .dragdealer {
+    background: $silver;
+    position: relative;
+
+    &:after {
+      content: '\3E Slide handle';
+      font-size: 12px;
+      font-size: 1.2rem;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+      will-change: opacity;
+      transition: all 0.3s ease;
+    }
+
+    &.touched {
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
   .handle {
+    text-indent: -99999rem;
     width: 60px;
-    background: yellow;
+    height: 30px;
+    position: relative;
+    background: $dark-blue;
+    cursor: pointer;
+
+    span,
+    span:before,
+    span:after {
+      display: block;
+      width: 1px;
+      height: 10px;
+      background: $silver;
+      position: absolute;
+    }
+
+    span {
+      @include centre();
+
+      &:before,
+      &:after {
+        content: '';
+        top: 0;
+      }
+
+      &:before {
+        left: -4px;
+      }
+
+      &:after {
+        right: -4px;
+      }
+    }
   }
 </style>

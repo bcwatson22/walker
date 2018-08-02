@@ -1,6 +1,6 @@
 <template>
-  <section class="contact">
-    <h2>Contact</h2>
+  <section class="bio">
+    <h2>Bio</h2>
     <div class="content">
       <article class="text">
         <p>James Walker is a plasterer from Derbyshire. He grew up in Birchover and went to Lady Manners School. He was born in a barn and has a reyt shire accent. He has been plastering for donkeys' years and has a lot of experience.</p>
@@ -9,7 +9,7 @@
         <p>James likes to go cycling in his spare time. He shaves his legs to avoid 'road rash'. He was always into mountain biking but then he went full roadie. He has now got a mountain bike again and loves Strava. It is a Cube Stereo. It isn't as good as his friend Billy's but he doesn't care.</p>
       </article>
       <article class="image">
-        <img src="./../../assets/images/global/van.jpg" alt="Bakewell Plastering van">
+        <img src="./../../assets/images/global/walker.jpg" alt="James Walker portrait">
       </article>
     </div>
   </section>
@@ -17,7 +17,7 @@
 
 <script>
   export default {
-    name: 'Contact'
+    name: 'Bio'
   }
 </script>
 

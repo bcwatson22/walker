@@ -26,4 +26,56 @@ body {
 
 main {
   padding: 0 24px 24px;
+
+  > * {
+    margin-bottom: 60px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text,
+.image {
+  width: calc(50% - 24px);
+}
+
+.text {
+  margin-bottom: 36px;
+}
+
+.splash,
+.dragdealer,
+.handle,
+.image-holder,
+.image {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.icon {
+  display: block;
+  width: 84px;
+  height: 84px;
+  border-radius: 100%;
+  text-indent: -99999rem;
+  overflow: hidden;
+  position: relative;
+  will-change: opacity, transform;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &.play {
+    background: url('./../../assets/images/global/icons/video-circle.svg') 50% 50% no-repeat;
+  }
 }

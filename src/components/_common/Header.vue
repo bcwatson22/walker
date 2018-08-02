@@ -24,6 +24,7 @@
 <style lang="scss" scoped>
   header {
     padding: 24px;
+    margin-bottom: 36px;
   }
 
   .logo {

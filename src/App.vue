@@ -5,11 +5,13 @@
 
       <main>
         <Landing/>
+        <Bio/>
         <Transformations/>
+        <Contact/>
         <!-- <router-view></router-view> -->
       </main>
 
-      <!-- <Footer :year="copyrightYear"/> -->
+      <Footer :year="copyrightYear"/>
     </section>
     <!-- <CookieBanner v-if="cookieBanner"/> -->
   </div>
@@ -18,7 +20,9 @@
 <script>
   import Header from './components/_common/Header.vue';
   import Landing from './components/_common/Landing.vue';
+  import Bio from './components/_common/Bio.vue';
   import Transformations from './components/_common/Transformations.vue';
+  import Contact from './components/_common/Contact.vue';
   import Footer from './components/_common/Footer.vue';
   import CookieBanner from './components/_common/CookieBanner.vue';
 
@@ -32,7 +36,9 @@
     components: {
       Header,
       Landing,
+      Bio,
       Transformations,
+      Contact,
       Footer,
       CookieBanner
     },

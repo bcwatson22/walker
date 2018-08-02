@@ -1,10 +1,16 @@
 <template>
   <section class="transformations">
-    <h2>Before and after</h2>
-    <div class="sliders">
+    <article class="text">
+      <h2>Before and after</h2>
+      <p>Sometimes it's hard to imagine how much difference there is from the start to the end of a job!</p>
+      <p>Click and drag or swipe across the blue handles on each of the sliders below to see before and after photos for various jobs undertaken by Bakewell Plastering.</p>
+    </article>
+    <article class="sliders">
       <Transformation :initial="'1-a'" :reveal="'1-b'" />
       <Transformation :initial="'3-a'" :reveal="'3-b'" />
-    </div>
+      <Transformation :initial="'2-a'" :reveal="'2-b'" />
+      <Transformation :initial="'4-a'" :reveal="'4-b'" />
+    </article>
   </section>
 </template>
 
@@ -23,10 +29,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .transformations {
-    margin-top: 48px;
-  }
-
   .sliders {
     display: flex;
     flex-wrap: wrap;

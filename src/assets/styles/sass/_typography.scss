@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   font-size: 1.6rem;
+  color: $dark-grey;
 }
 
 h1,
@@ -16,13 +17,16 @@ h2,
 h3 {
   font-weight: normal;
   margin-bottom: 24px;
+  font-family: Baskerville, serif;
+  color: $dark-blue;
 }
 
 h1,
 h2 {
-  font-size: 30px;
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 40px;
+  font-size: 4rem;
+  line-height: 3rem;
+  font-weight: 900;
   margin-bottom: 24px;
 }
 
@@ -47,6 +51,7 @@ small {
 }
 
 a {
+  color: $van-blue;
   text-decoration: none;
 
   &:hover,
