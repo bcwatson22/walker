@@ -1,7 +1,7 @@
 <template>
   <header>
     <router-link to="/projects" class="logo">
-      <img src="./../../assets/images/global/logo.svg" alt="Bakewell Plastering logo">
+      <img src="./../../assets/images/global/logo-horizontal.svg" alt="Bakewell Plastering logo">
     </router-link>
 
     <Nav/>
@@ -23,13 +23,13 @@
 
 <style lang="scss" scoped>
   header {
-    padding: 24px;
-    margin-bottom: 36px;
+    padding: 24px 24px 0;
+    margin-bottom: 24px;
   }
 
   .logo {
     display: block;
     width: 50%;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 </style>

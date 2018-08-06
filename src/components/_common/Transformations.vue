@@ -1,5 +1,5 @@
 <template>
-  <section class="transformations">
+  <section class="page transformations">
     <article class="text">
       <h2>Before and after</h2>
       <p>Sometimes it's hard to imagine how much difference there is from the start to the end of a job!</p>
@@ -33,5 +33,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .text {
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 </style>

@@ -50,7 +50,7 @@
 
   .transformation {
     width: calc(50% - 24px);
-    margin-bottom: 48px;
+    margin-top: 48px;
   }
 
   .image-holder {

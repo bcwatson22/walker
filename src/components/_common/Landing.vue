@@ -1,5 +1,5 @@
 <template>
-  <section class="landing">
+  <section class="page landing">
     <article class="splash" :class="[{ 'loading': showPlayer, 'embedded': playerReady }]">
       <span class="iframe-holder">
         <iframe v-if="showPlayer" src="https://player.vimeo.com/video/282563026" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>

@@ -32,11 +32,38 @@ main {
   }
 }
 
+.page {
+  margin-bottom: 72px;
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  .text {
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // height: 100%;
+    //
+    // * {
+    //   width: 100%;
+    // }
+    //
+    // h2 {
+    //   // margin-bottom: auto;
+    //   align-self: flex-start;
+    // }
+    p,
+    h3 {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .text,
@@ -44,9 +71,9 @@ main {
   width: calc(50% - 24px);
 }
 
-.text {
-  margin-bottom: 36px;
-}
+// .text {
+//   margin-bottom: 36px;
+// }
 
 .splash,
 .dragdealer,
