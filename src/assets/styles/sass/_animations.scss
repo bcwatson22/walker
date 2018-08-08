@@ -1,0 +1,14 @@
+.router-enter-active,
+.router-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.router-enter-active {
+  transition-delay: .25s;
+}
+
+.router-enter,
+.router-leave-active {
+  opacity: 0
+}

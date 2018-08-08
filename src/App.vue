@@ -4,11 +4,13 @@
       <Header/>
 
       <main>
-        <Landing/>
+        <!-- <Landing/>
         <Bio/>
         <Transformations/>
-        <Contact/>
-        <!-- <router-view></router-view> -->
+        <Contact/> -->
+        <transition name="router">
+          <router-view></router-view>
+        </transition>
       </main>
 
       <Footer :year="copyrightYear"/>
