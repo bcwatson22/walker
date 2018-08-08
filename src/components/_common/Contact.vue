@@ -1,5 +1,6 @@
 <template>
   <section class="page contact">
+    <img src="./../../assets/images/global/trowel.png" class="trowel" alt="Trowel image">
     <div class="content">
     <article class="image">
       <img src="./../../assets/images/global/van.jpg" alt="Bakewell Plastering van">

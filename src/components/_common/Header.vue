@@ -25,11 +25,19 @@
   header {
     padding: 24px 24px 0;
     margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo,
+  nav {
+    width: calc(50% - 24px);
   }
 
   .logo {
     display: block;
-    width: 50%;
+    // width: 50%;
     // margin: 0 auto;
   }
 </style>

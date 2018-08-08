@@ -1,14 +1,78 @@
+// .router-enter-active,
+// .router-leave-active {
+//   transition-property: opacity;
+//   transition-duration: .25s;
+// }
+//
+// .router-enter-active {
+//   transition-delay: .25s;
+// }
+//
+// .router-enter,
+// .router-leave-active {
+//   opacity: 0
+// }
+
+@keyframes prevRoute {
+  0% {
+    opacity: 1;
+  }
+  // 40% {
+  //   opacity: 1;
+  // }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes trowelRoute {
+  0% {
+    transform: rotate(-10deg) translateX(-80%);
+    // opacity: 0;
+  }
+  50% {
+    transform: rotate(0deg) translateX(1%);
+    // opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes trowelImage {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .router-enter-active,
 .router-leave-active {
-  transition-property: opacity;
-  transition-duration: .25s;
+  min-height: 700px;
+}
+
+.router-leave-active {
+  position: absolute;
+  top: 0;
+
+  animation: prevRoute 0.7s ease;
 }
 
 .router-enter-active {
-  transition-delay: .25s;
-}
+  transform-origin: bottom center;
+  animation: trowelRoute 1s ease;
 
-.router-enter,
-.router-leave-active {
-  opacity: 0
+  .trowel {
+    display: block;
+    animation: trowelImage 1s ease;
+  }
 }

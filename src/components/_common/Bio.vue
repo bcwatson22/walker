@@ -1,5 +1,6 @@
 <template>
   <section class="page bio">
+    <img src="./../../assets/images/global/trowel.png" class="trowel" alt="Trowel image">
     <div class="content">
       <article class="text">
         <h2>Bio</h2>

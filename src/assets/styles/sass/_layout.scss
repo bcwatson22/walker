@@ -26,6 +26,7 @@ body {
 
 main {
   padding: 0 24px 24px;
+  position: relative;
 
   > * {
     margin-bottom: 60px;
@@ -34,6 +35,16 @@ main {
 
 .page {
   margin-bottom: 72px;
+  position: relative;
+
+  .trowel {
+    position: absolute;
+    top: 0;
+    right: -370px;
+    height: 500px;
+    width: auto;
+    display: none;
+  }
 }
 
 .content {

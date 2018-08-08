@@ -1,5 +1,6 @@
 <template>
   <section class="page landing">
+    <img src="./../../assets/images/global/trowel.png" class="trowel" alt="Trowel image">
     <article class="splash" :class="[{ 'loading': showPlayer, 'embedded': playerReady }]">
       <span class="iframe-holder">
         <iframe v-if="showPlayer" src="https://player.vimeo.com/video/282563026" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>
