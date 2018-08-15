@@ -40,9 +40,9 @@ main {
   .trowel {
     position: absolute;
     top: 0;
-    right: -370px;
+    right: -275px;
     height: 500px;
-    width: auto;
+    width: 275px;
     display: none;
   }
 }
@@ -68,8 +68,18 @@ main {
     //   // margin-bottom: auto;
     //   align-self: flex-start;
     // }
+    ul {
+      margin-top: 15px;
+      padding-left: 15px;
+
+      li {
+        list-style: circle;
+      }
+    }
+
     p,
-    h3 {
+    h3,
+    li {
       &:last-of-type {
         margin-bottom: 0;
       }

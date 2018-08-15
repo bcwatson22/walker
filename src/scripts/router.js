@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Landing from './../components/_common/Landing';
+import Home from './../components/_common/Home';
+import Services from './../components/_common/Services';
 import Bio from './../components/_common/Bio';
 import Transformations from './../components/_common/Transformations';
 import Contact from './../components/_common/Contact';
@@ -14,7 +15,12 @@ const router = new Router({
     {
       path: '/',
       name: 'Home',
-      component: Landing
+      component: Home
+    },
+    {
+      path: '/services',
+      name: 'Services',
+      component: Services
     },
     {
       path: '/bio',

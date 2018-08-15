@@ -1,9 +1,9 @@
 <template>
   <section class="page bio">
-    <img src="./../../assets/images/global/trowel.png" class="trowel" alt="Trowel image">
+    <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image">
+    <h1>Bio</h1>
     <div class="content">
       <article class="text">
-        <h2>Bio</h2>
         <p>James Walker is a plasterer from Derbyshire. He grew up in Birchover and went to Lady Manners School. He was born in a barn and has a reyt shire accent. He has been plastering for donkeys' years and has a lot of experience.</p>
         <p>He lives in Over Haddon. He has a lovely wife called Hannah. They got married in Over Haddon in summer 2016. The ceremony was in Over Haddon church and the shindig in the village hall. It was nice. Everyone had a lot of fun. It didn't rain.</p>
         <p>They have two cats. The cats are soft and purr. They are friendly. One is called Walter and he wears socks. The other is called Polly and is scared of visitors.</p>

@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   font-size: 1.6rem;
-  color: $dark-grey;
+  color: $dark-blue;
 }
 
 h1,
@@ -18,7 +18,7 @@ h3 {
   font-weight: normal;
   margin-bottom: 24px;
   font-family: Baskerville, serif;
-  color: $dark-blue;
+  color: $light-blue;
 }
 
 h1,
@@ -31,7 +31,7 @@ h2 {
 }
 
 h1 {
-  text-align: center;
+  // text-align: center;
 }
 
 h3 {
@@ -52,7 +52,7 @@ small {
 }
 
 a {
-  color: $dark-blue;
+  color: $light-blue;
   text-decoration: none;
 
   &:hover,

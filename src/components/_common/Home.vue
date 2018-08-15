@@ -1,6 +1,7 @@
 <template>
-  <section class="page landing">
-    <img src="./../../assets/images/global/trowel.png" class="trowel" alt="Trowel image">
+  <section class="page Home">
+    <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image">
+    <h1>Home</h1>
     <article class="splash" :class="[{ 'loading': showPlayer, 'embedded': playerReady }]">
       <span class="iframe-holder">
         <iframe v-if="showPlayer" src="https://player.vimeo.com/video/282563026" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>
@@ -15,7 +16,7 @@
   import mixins from './../../scripts/mixins.js';
 
   export default {
-    name: 'Landing',
+    name: 'Home',
     mixins: [mixins],
     data () {
       return {
@@ -43,7 +44,7 @@
     },
     mounted () {
 
-      this.updateTitleMeta('Landing');
+      this.updateTitleMeta('Home');
 
     }
   }

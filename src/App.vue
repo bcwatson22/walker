@@ -4,7 +4,7 @@
       <Header/>
 
       <main>
-        <!-- <Landing/>
+        <!-- <Home/>
         <Bio/>
         <Transformations/>
         <Contact/> -->
@@ -21,7 +21,7 @@
 
 <script>
   import Header from './components/_common/Header.vue';
-  import Landing from './components/_common/Landing.vue';
+  import Home from './components/_common/Home.vue';
   import Bio from './components/_common/Bio.vue';
   import Transformations from './components/_common/Transformations.vue';
   import Contact from './components/_common/Contact.vue';
@@ -37,7 +37,7 @@
     name: 'app',
     components: {
       Header,
-      Landing,
+      Home,
       Bio,
       Transformations,
       Contact,

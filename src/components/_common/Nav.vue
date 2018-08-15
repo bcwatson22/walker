@@ -1,12 +1,13 @@
 <template>
-  <nav>
+  <!-- <nav> -->
     <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/bio">Bio</router-link></li>
-      <li><router-link to="/before-and-after">Tranformations</router-link></li>
-      <li><router-link to="/contact">Contact</router-link></li>
+      <li><a href="/" @click.prevent="closeAndGo($event)">Home</a></li>
+      <li><a href="/services" @click.prevent="closeAndGo($event)">Services</a></li>
+      <li><a href="/bio" @click.prevent="closeAndGo($event)">Bio</a></li>
+      <li><a href="/before-and-after" @click.prevent="closeAndGo($event)">Transformations</a></li>
+      <li><a href="/contact" @click.prevent="closeAndGo($event)">Contact</a></li>
     </ul>
-  </nav>
+  <!-- </nav> -->
 </template>
 
 <script>
@@ -14,7 +15,16 @@
 
   export default {
     name: 'Nav',
-    mixins: [mixins]
+    mixins: [mixins],
+    methods: {
+      closeAndGo: function (event) {
+
+        this.toggleElement(event, 'body', 'header');
+
+        this.linkTo(event, false);
+
+      }
+    }
   }
 </script>
 
@@ -22,6 +32,14 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  li {
+    margin: 0;
+
+    a {
+      padding: 12px 0;
+    }
   }
 </style>
