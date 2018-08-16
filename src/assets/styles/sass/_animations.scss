@@ -1,17 +1,28 @@
-// .router-enter-active,
-// .router-leave-active {
-//   transition-property: opacity;
-//   transition-duration: .25s;
-// }
-//
-// .router-enter-active {
-//   transition-delay: .25s;
-// }
-//
-// .router-enter,
-// .router-leave-active {
-//   opacity: 0
-// }
+@keyframes fadeOutThenMove {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveThenFadeIn {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes prevRoute {
   0% {

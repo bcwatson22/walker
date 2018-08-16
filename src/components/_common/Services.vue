@@ -22,8 +22,8 @@
         </ul>
       </article>
       <article class="image">
-        <img src="./../../assets/images/global/van.jpg" alt="Bakewell Plastering van">
-        <!-- <img src="./../../assets/images/global/services.jpg" alt="Completed project"> -->
+        <!-- <img src="./../../assets/images/global/van.jpg" alt="Bakewell Plastering van"> -->
+        <img src="./../../assets/images/global/outside.jpg" alt="Completed project">
       </article>
     </div>
   </section>

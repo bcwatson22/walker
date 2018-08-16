@@ -1,13 +1,12 @@
 <template>
   <header class="group">
+    <router-link to="/projects" class="logo">
+      <img src="./../../assets/images/global/logo-horizontal.svg" alt="Bakewell Plastering logo">
+    </router-link>
     <nav>
       <button class="menu-toggle" @click="toggleElement($event, 'body', 'header')"><span>Menu</span></button>
       <Nav/>
     </nav>
-
-    <router-link to="/projects" class="logo">
-      <img src="./../../assets/images/global/logo-horizontal.svg" alt="Bakewell Plastering logo">
-    </router-link>
   </header>
 </template>
 
@@ -44,12 +43,15 @@
     justify-content: space-between;
 
     ul {
+      padding: 24px 0;
+      font-size: 20px;
+      font-size: 2rem;
       width: calc(100% - 124px);
       left: 100px;
       position: absolute;
       opacity: 0;
       transform: translateY(-100%);
-      transition: all 0.5s ease;
+      transition: opacity 0.5s ease;
       will-change: opacity, transform;
 
       .toggle & {
@@ -74,11 +76,11 @@
     // opacity: 0;
     // transform: translateY(0%);
     transition: all 0.5s ease;
-    will-change: transform;
+    // will-change: transform;
 
     .toggle & {
-      // opacity: 1;
-      transform: translateY(48px);
+      opacity: 0.1;
+      // transform: translateY(48px);
     }
   }
 

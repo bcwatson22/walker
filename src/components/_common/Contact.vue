@@ -10,7 +10,7 @@
         <h3><a href="mailto:bakewellplastering@aol.co.uk">bakewellplastering@aol.co.uk</a></h3>
       </article>
       <article class="image">
-        <img src="./../../assets/images/global/services.jpg" alt="Completed project">
+        <img src="./../../assets/images/global/van.jpg" alt="Bakewell Plastering van">
       </article>
     </div>
   </section>

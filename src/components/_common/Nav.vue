@@ -40,6 +40,16 @@
 
     a {
       padding: 12px 0;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:active {
+        text-decoration: underline;
+      }
     }
   }
 </style>
