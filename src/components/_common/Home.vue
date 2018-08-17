@@ -49,7 +49,7 @@
     },
     mounted () {
 
-      this.updateTitleMeta('Home');
+      // this.updateTitleMeta('Home');
 
     }
   }
