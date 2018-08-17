@@ -28,7 +28,7 @@ const router = new Router({
       component: Bio
     },
     {
-      path: '/before-and-after',
+      path: '/transformations',
       name: 'Transformations',
       component: Transformations
     },

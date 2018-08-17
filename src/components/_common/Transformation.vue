@@ -1,24 +1,30 @@
 <template>
   <article class="transformation">
     <div class="image-holder">
-      <img :src="require('./../../assets/images/transformations/' + initial + '.jpg')" alt="Before image" class="initial">
+      <!-- <img :src="require('./../../assets/images/transformations/' + initial + '.jpg')" alt="Before image" class="initial"> -->
+      <v-lazy-image :src="require('./../../assets/images/transformations/' + initial + '-full.jpg')" :src-placeholder="require('./../../assets/images/transformations/' + initial + '-thumb.jpg')" alt="Before image" class="initial"></v-lazy-image>
       <img :src="require('./../../assets/images/transformations/' + reveal + '.jpg')" alt="After image" class="reveal">
     </div>
     <div :id="'slider-' + initial.substring(0, 1)" class="dragdealer">
-      <div class="handle"><span>Handle</span></div>
+      <!-- <div class="handle"><span>Handle</span></div> -->
+      <div class="handle">Handle</div>
     </div>
   </article>
 </template>
 
 <script>
-  import Dragdealer from 'dragdealer';
   import mixins from './../../scripts/mixins.js';
+  import Dragdealer from 'dragdealer';
+  import VLazyImage from 'v-lazy-image';
 
   export default {
     name: 'Transformation',
     props: {
       initial: String,
       reveal: String
+    },
+    components: {
+      VLazyImage
     },
     mixins: [mixins],
     mounted () {
@@ -68,6 +74,9 @@
   .dragdealer {
     background: $silver;
     position: relative;
+    height: 20px;
+    overflow: visible;
+    border-radius: 6px;
 
     &:after {
       content: '\3E Slide handle';
@@ -91,38 +100,40 @@
 
   .handle {
     text-indent: -99999rem;
-    width: 60px;
-    height: 30px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
     position: relative;
-    background: $dark-blue;
+    top: -10px;
+    background: $light-blue;
     cursor: pointer;
 
-    span,
-    span:before,
-    span:after {
-      display: block;
-      width: 1px;
-      height: 10px;
-      background: $silver;
-      position: absolute;
-    }
-
-    span {
-      @include centre();
-
-      &:before,
-      &:after {
-        content: '';
-        top: 0;
-      }
-
-      &:before {
-        left: -4px;
-      }
-
-      &:after {
-        right: -4px;
-      }
-    }
+    // span,
+    // span:before,
+    // span:after {
+    //   display: block;
+    //   width: 1px;
+    //   height: 10px;
+    //   background: $silver;
+    //   position: absolute;
+    // }
+    //
+    // span {
+    //   @include centre();
+    //
+    //   &:before,
+    //   &:after {
+    //     content: '';
+    //     top: 0;
+    //   }
+    //
+    //   &:before {
+    //     left: -4px;
+    //   }
+    //
+    //   &:after {
+    //     right: -4px;
+    //   }
+    // }
   }
 </style>

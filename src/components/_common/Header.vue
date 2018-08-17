@@ -44,8 +44,8 @@
 
     ul {
       padding: 24px 0;
-      font-size: 20px;
-      font-size: 2rem;
+      font-size: 22px;
+      font-size: 2.2rem;
       width: calc(100% - 124px);
       left: 100px;
       position: absolute;

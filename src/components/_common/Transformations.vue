@@ -7,10 +7,10 @@
       <p>Click and drag or swipe across the blue handles on each of the sliders below to see before and after photos for various jobs undertaken by Bakewell Plastering.</p>
     </article>
     <article class="sliders">
-      <Transformation :initial="'1-a'" :reveal="'1-b'"/>
-      <Transformation :initial="'3-a'" :reveal="'3-b'"/>
-      <Transformation :initial="'2-a'" :reveal="'2-b'"/>
-      <Transformation :initial="'4-a'" :reveal="'4-b'"/>
+      <Transformation :initial="'1-initial'" :reveal="'1-reveal'"/>
+      <Transformation :initial="'3-initial'" :reveal="'3-reveal'"/>
+      <Transformation :initial="'2-initial'" :reveal="'2-reveal'"/>
+      <Transformation :initial="'4-initial'" :reveal="'4-reveal'"/>
     </article>
   </section>
 </template>
