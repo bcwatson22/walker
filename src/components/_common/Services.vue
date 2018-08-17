@@ -22,16 +22,21 @@
         </ul>
       </article>
       <article class="image">
-        <!-- <img src="./../../assets/images/global/van.jpg" alt="Bakewell Plastering van"> -->
-        <img src="./../../assets/images/global/outside.jpg" alt="Completed project">
+        <!-- <img src="./../../assets/images/pages/services.jpg" alt="Completed project"> -->
+        <v-lazy-image :src="require('./../../assets/images/pages/services-full.jpg')" :src-placeholder="require('./../../assets/images/pages/services-thumb.jpg')" alt="Completed project"></v-lazy-image>
       </article>
     </div>
   </section>
 </template>
 
 <script>
+  import VLazyImage from 'v-lazy-image';
+
   export default {
-    name: 'Services'
+    name: 'Services',
+    components: {
+      VLazyImage
+    }
   }
 </script>
 

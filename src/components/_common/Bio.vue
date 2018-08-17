@@ -10,15 +10,21 @@
         <p>James likes to go cycling in his spare time. He shaves his legs to avoid 'road rash'. He was always into mountain biking but then he went full roadie. He has now got a mountain bike again and loves Strava. It is a Cube Stereo. It isn't as good as his friend Billy's but he doesn't care.</p>
       </article>
       <article class="image">
-        <img src="./../../assets/images/global/walker.jpg" alt="James Walker portrait">
+        <!-- <img src="./../../assets/images/pages/bio.jpg" alt="James Walker portrait"> -->
+        <v-lazy-image :src="require('./../../assets/images/pages/bio-full.jpg')" :src-placeholder="require('./../../assets/images/pages/bio-thumb.jpg')" alt="James Walker portrait"></v-lazy-image>
       </article>
     </div>
   </section>
 </template>
 
 <script>
+  import VLazyImage from 'v-lazy-image';
+
   export default {
-    name: 'Bio'
+    name: 'Bio',
+    components: {
+      VLazyImage
+    }
   }
 </script>
 

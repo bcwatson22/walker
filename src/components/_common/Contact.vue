@@ -10,15 +10,21 @@
         <h3><a href="mailto:bakewellplastering@aol.co.uk">bakewellplastering@aol.co.uk</a></h3>
       </article>
       <article class="image">
-        <img src="./../../assets/images/global/van.jpg" alt="Bakewell Plastering van">
+        <!-- <img src="./../../assets/images/pages/contact.jpg" alt="Bakewell Plastering van"> -->
+        <v-lazy-image :src="require('./../../assets/images/pages/contact-full.jpg')" :src-placeholder="require('./../../assets/images/pages/contact-thumb.jpg')" alt="Bakewell Plastering van"></v-lazy-image>
       </article>
     </div>
   </section>
 </template>
 
 <script>
+  import VLazyImage from 'v-lazy-image';
+
   export default {
-    name: 'Contact'
+    name: 'Contact',
+    components: {
+      VLazyImage
+    }
   }
 </script>
 

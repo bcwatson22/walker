@@ -1,8 +1,8 @@
 <template>
   <article class="transformation">
     <div class="image-holder">
-      <img :src="require('./../../assets/images/transformation/' + initial + '.jpg')" alt="blah" class="initial">
-      <img :src="require('./../../assets/images/transformation/' + reveal + '.jpg')" alt="blah" class="reveal">
+      <img :src="require('./../../assets/images/transformations/' + initial + '.jpg')" alt="Before image" class="initial">
+      <img :src="require('./../../assets/images/transformations/' + reveal + '.jpg')" alt="After image" class="reveal">
     </div>
     <div :id="'slider-' + initial.substring(0, 1)" class="dragdealer">
       <div class="handle"><span>Handle</span></div>

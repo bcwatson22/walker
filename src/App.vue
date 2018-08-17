@@ -4,11 +4,7 @@
       <Header/>
 
       <main>
-        <!-- <Home/>
-        <Bio/>
-        <Transformations/>
-        <Contact/> -->
-        <transition name="router">
+        <transition name="fade">
           <router-view></router-view>
         </transition>
       </main>
