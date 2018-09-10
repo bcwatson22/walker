@@ -74,28 +74,28 @@
   .dragdealer {
     background: $silver;
     position: relative;
-    height: 20px;
+    height: 12px;
     overflow: visible;
     border-radius: 6px;
 
-    &:after {
-      content: '\3E Slide handle';
-      font-size: 12px;
-      font-size: 1.2rem;
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 1;
-      will-change: opacity;
-      transition: all 0.3s ease;
-    }
+    // &:after {
+    //   content: '\3E Slide';
+    //   font-size: 12px;
+    //   font-size: 1.2rem;
+    //   position: absolute;
+    //   right: 12px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   opacity: 1;
+    //   will-change: opacity;
+    //   transition: all 0.3s ease;
+    // }
 
-    &.touched {
-      &:after {
-        opacity: 0;
-      }
-    }
+    // &.touched {
+    //   &:after {
+    //     opacity: 0;
+    //   }
+    // }
   }
 
   .handle {
@@ -104,7 +104,7 @@
     width: 40px;
     height: 40px;
     position: relative;
-    top: -10px;
+    top: -14px;
     background: $light-blue;
     cursor: pointer;
 

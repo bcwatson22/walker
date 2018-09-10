@@ -1,12 +1,10 @@
 <template>
   <section class="page Home">
-    <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image">
-    <h1>Home</h1>
+    <h1 class="hidden">Home</h1>
     <article class="splash" :class="[{ 'loading': showPlayer, 'embedded': playerReady }]">
       <span class="iframe-holder">
         <iframe v-if="showPlayer" src="https://player.vimeo.com/video/282563026" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>
       </span>
-      <!-- <img src="./../../assets/images/pages/home.jpg" alt="Splash image"> -->
       <v-lazy-image :src="require('./../../assets/images/pages/home-full.jpg')" :src-placeholder="require('./../../assets/images/pages/home-thumb.jpg')" alt="Completed project"></v-lazy-image>
       <button class="icon play" @click.self="loadVideo()">Play</button>
     </article>

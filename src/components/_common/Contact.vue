@@ -1,16 +1,36 @@
 <template>
   <section class="page contact">
-    <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image">
-    <h1>Contact</h1>
+    <!-- <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image"> -->
     <div class="content">
       <article class="text">
-        <p>Any jobs considered within a 10 mile radius of Bakewell.</p>
-        <p>For more information or to request a no-obligation quote please email:</p>
-        <h3><a href="mailto:bakewellplastering@aol.co.uk">bakewellplastering@aol.co.uk</a></h3>
+        <h1>Contact</h1>
+        <p>All jobs considered.</p>
+        <p>For more information or to request a no-obligation quote please fill in the following form:</p>
+        <!-- <h3><a href="mailto:bakewellplastering@aol.co.uk">bakewellplastering@aol.co.uk</a></h3> -->
+        <form id="contactform" action="//formspree.io/bcwatson22@gmail.com" method="POST">
+          <fieldset>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="tel" name="phone" placeholder="Phone number" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <textarea name="message" placeholder="Brief description of required work" required></textarea>
+            <!-- <span class="dropdown"> -->
+            <select name="budget" required>
+              <option value="" selected disabled>Rough budget</option>
+              <option value="Less than £500">Less than £500</option>
+              <option value="£500-1000">£500-1000</option>
+              <option value="£1000-5000">£1000-5000</option>
+              <option value="£5000+">£5000+</option>
+            </select>
+            <!-- </span> -->
+            <input type="hidden" name="_subject" value="Website quote enquiry">
+            <input type="hidden" name="_next" value="//mywebsite.com/thanks.html">
+            <input type="text" name="_gotcha" class="honeypot">
+            <input type="submit" value="Send">
+          </fieldset>
+        </form>
       </article>
       <article class="image">
-        <!-- <img src="./../../assets/images/pages/contact.jpg" alt="Bakewell Plastering van"> -->
-        <v-lazy-image :src="require('./../../assets/images/pages/van-full.jpg')" :src-placeholder="require('./../../assets/images/pages/van-thumb.jpg')" alt="Bakewell Plastering van"></v-lazy-image>
+        <v-lazy-image :src="require('./../../assets/images/pages/contact-full.jpg')" :src-placeholder="require('./../../assets/images/pages/contact-thumb.jpg')" alt="Bakewell Plastering van"></v-lazy-image>
       </article>
     </div>
   </section>
@@ -28,5 +48,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .honeypot {
+    display: none;
+  }
 </style>

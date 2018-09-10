@@ -1,9 +1,8 @@
 <template>
   <section class="page contact">
-    <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image">
-    <h1>Services</h1>
     <div class="content">
       <article class="text">
+        <h1>Services</h1>
         <p>All aspects of plasterwork undertaken.</p>
         <p>Bakewell Plastering has over 6 years' experience of providing a quality finish at an affordable price to our customers, so whether it's a small repair or an entire property refurbishment we guarantee you will be satisfied with the results!</p>
         <p>Our services include (but aren't limited to):</p>
@@ -22,7 +21,6 @@
         </ul>
       </article>
       <article class="image">
-        <!-- <img src="./../../assets/images/pages/services.jpg" alt="Completed project"> -->
         <v-lazy-image :src="require('./../../assets/images/pages/services-full.jpg')" :src-placeholder="require('./../../assets/images/pages/services-thumb.jpg')" alt="Completed project"></v-lazy-image>
       </article>
     </div>

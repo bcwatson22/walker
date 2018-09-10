@@ -17,8 +17,8 @@ h2,
 h3 {
   font-weight: normal;
   margin-bottom: 24px;
-  font-family: Baskerville, serif;
-  color: $light-blue;
+  // font-family: Baskerville, serif;
+  color: $dark-blue;
 }
 
 h1,
@@ -27,7 +27,7 @@ h2 {
   font-size: 4rem;
   line-height: 3rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 h1 {
@@ -87,6 +87,93 @@ li {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+}
+
+form {
+  margin-top: 24px;
+
+  ::placeholder {
+    color: #888;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder {
+    color: #888;
+  }
+
+  ::-ms-input-placeholder {
+    color: #888;
+  }
+
+  * {
+    border: none;
+    margin: 0 0 12px;
+    display: block;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: $dark-blue;
+    border: 1px solid transparent;
+
+    &:focus {
+      outline: 0;
+      border: 1px solid $silver;
+    }
+  }
+
+  fieldset {
+    padding: 0;
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"],
+    &[type="tel"] {
+      width: 100%;
+    }
+
+    &[type=submit] {
+      background: $dark-blue;
+      color: #fff;
+      // margin-top: 24px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding-bottom: 24px;
+  }
+
+  // .dropdown {
+  //   padding: 0;
+  //   position: relative;
+  //
+  //   &:before {
+  //     content: '';
+  //     width: 0;
+  //     height: 0;
+  //     border-left: 6px solid transparent;
+  //     border-right: 6px solid transparent;
+  //     border-top: 6px solid $dark-blue;
+  //     position: absolute;
+  //     right: 12px;
+  //     top: 50%;
+  //     transform: translateY(-100%);
+  //   }
+  // }
+
+  select {
+    width: 100%;
+    padding: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    option[disabled] {
+      color: #777;
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
