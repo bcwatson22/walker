@@ -4,61 +4,50 @@
     <div class="content">
       <article class="text">
         <h1>Contact</h1>
-        <p>All jobs considered.</p>
-        <p>For more information or to request a no-obligation quote please fill in the following form:</p>
-        <!-- <h3><a href="mailto:bakewellplastering@aol.co.uk">bakewellplastering@aol.co.uk</a></h3> -->
-        <form id="contactform" action="//formspree.io/bcwatson22@gmail.com" method="POST">
-          <!-- <fieldset>
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="tel" name="phone" placeholder="Phone number" required>
-            <input type="email" name="email" placeholder="Email address" required>
-            <textarea name="message" placeholder="Brief description of required work" required></textarea>
-            <select name="budget" required>
-              <option value="" selected disabled>Rough budget</option>
-              <option value="Less than £500">Less than £500</option>
-              <option value="£500-1000">£500-1000</option>
-              <option value="£1000-5000">£1000-5000</option>
-              <option value="£5000+">£5000+</option>
-            </select>
-            <input type="hidden" name="_subject" value="Website quote enquiry">
-            <input type="hidden" name="_next" value="//mywebsite.com/thanks.html">
-            <input type="text" name="_gotcha" class="honeypot">
-            <input type="submit" value="Send">
-          </fieldset> -->
-          <fieldset>
-            <div class="input">
-              <input type="text" name="name" required>
-              <label for="name">Name</label>
-            </div>
-            <div class="input">
-              <input type="tel" name="phone" required>
-              <label for="phone">Phone number</label>
-            </div>
-            <div class="input">
-              <input type="email" name="email" required>
-              <label for="email">Email address</label>
-            </div>
-            <div class="input">
-              <textarea name="message" required></textarea>
-              <label for="message">Brief description of work</label>
-            </div>
-            <div class="input">
-              <select name="budget" required>
-                <!-- <option value="" selected disabled>Rough budget</option> -->
-                <option value="" selected disabled></option>
-                <option value="Less than £500">Less than £500</option>
-                <option value="£500-1000">£500-1000</option>
-                <option value="£1000-5000">£1000-5000</option>
-                <option value="£5000+">£5000+</option>
-              </select>
-              <label for="budget">Rough budget</label>
-            </div>
-            <input type="hidden" name="_subject" value="Website quote enquiry">
-            <input type="hidden" name="_next" value="//mywebsite.com/thanks.html">
-            <input type="text" name="_gotcha" class="honeypot">
-            <input type="submit" value="Send">
-          </fieldset>
-        </form>
+        <div v-if="!formSent" class="contact-content">
+          <p>All jobs considered.</p>
+          <p>For more information or to request a no-obligation quote please fill in the following form:</p>
+          <!-- <h3><a href="mailto:bakewellplastering@aol.co.uk">bakewellplastering@aol.co.uk</a></h3> -->
+          <form id="contactform" action="//formspree.io/bcwatson22@gmail.com" method="POST">
+            <fieldset>
+              <div class="input">
+                <input type="text" name="name" required>
+                <label for="name">Name</label>
+              </div>
+              <div class="input">
+                <input type="tel" name="phone" required>
+                <label for="phone">Phone number</label>
+              </div>
+              <div class="input">
+                <input type="text" name="email" required>
+                <label for="email">Email address</label>
+              </div>
+              <div class="input">
+                <textarea name="message" required></textarea>
+                <label for="message">Brief description of work</label>
+              </div>
+              <div class="input">
+                <select name="budget" required>
+                  <!-- <option value="" selected disabled>Rough budget</option> -->
+                  <option value="" selected disabled></option>
+                  <option value="Less than £500">Less than £500</option>
+                  <option value="£500-1000">£500-1000</option>
+                  <option value="£1000-5000">£1000-5000</option>
+                  <option value="£5000+">£5000+</option>
+                </select>
+                <label for="budget">Rough budget</label>
+              </div>
+              <input type="hidden" name="_subject" value="Website quote enquiry">
+              <input type="hidden" name="_next" value="/contact?form=success">
+              <input type="text" name="_gotcha" class="honeypot">
+              <input type="submit" value="Send">
+            </fieldset>
+          </form>
+        </div>
+        <div v-if="formSent" class="contact-content">
+          <h2>Thanks for your enquiry.</h2>
+          <h3>Bakewell Plastering will be in touch.</h3>
+        </div>
       </article>
       <article class="image">
         <v-lazy-image :src="require('./../../assets/images/pages/contact-full.jpg')" :src-placeholder="require('./../../assets/images/pages/contact-thumb.jpg')" alt="Bakewell Plastering van"></v-lazy-image>
@@ -72,6 +61,9 @@
 
   export default {
     name: 'Contact',
+    props: {
+      formSent: String
+    },
     components: {
       VLazyImage
     }

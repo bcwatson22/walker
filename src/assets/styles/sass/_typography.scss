@@ -17,12 +17,9 @@ h2,
 h3 {
   font-weight: normal;
   margin-bottom: 24px;
-  // font-family: Baskerville, serif;
-  color: $dark-blue;
 }
 
-h1,
-h2 {
+h1 {
   font-size: 40px;
   font-size: 4rem;
   line-height: 3rem;
@@ -30,13 +27,10 @@ h2 {
   margin-bottom: 48px;
 }
 
-h1 {
-  // text-align: center;
-}
-
-h3 {
+h2 {
   font-size: 2.4rem;
-  line-height: 2rem;
+  line-height: 2.2rem;
+  color: $light-blue;
   font-weight: 700;
   margin-bottom: 12px;
   margin-top: 24px;
@@ -187,6 +181,14 @@ form {
     &[type="email"],
     &[type="tel"] {
       width: 100%;
+    }
+
+    &[type="email"] {
+      color: $silver;
+
+      &:valid {
+        color: $dark-blue;
+      }
     }
 
     &[type=submit] {

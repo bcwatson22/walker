@@ -35,7 +35,10 @@ const router = new Router({
     {
       path: '/contact',
       name: 'Contact',
-      component: Contact
+      component: Contact,
+      props: (route) => ({
+        formSent: route.query.form
+      })
     },
     { path: '*',
       redirect: '/'
