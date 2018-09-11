@@ -101,7 +101,7 @@
       // left: 0;
       height: 6px;
       width: 36px;
-      background: $dark-blue;
+      background: $light-blue;
       transition: all 0.3s ease-in-out;
       border-radius: 6px;
     }

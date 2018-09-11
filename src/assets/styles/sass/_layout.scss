@@ -68,14 +68,14 @@ main {
     //   // margin-bottom: auto;
     //   align-self: flex-start;
     // }
-    ul {
-      margin-top: 15px;
-      padding-left: 15px;
-
-      li {
-        list-style: circle;
-      }
-    }
+    // ul {
+    //   margin-top: 15px;
+    //   padding-left: 15px;
+    //
+    //   li {
+    //     list-style: circle;
+    //   }
+    // }
 
     p,
     h3,
@@ -87,7 +87,7 @@ main {
   }
 
   .image {
-    background: $silver;
+    // background: $silver;
   }
 }
 
@@ -104,7 +104,8 @@ main {
 .dragdealer,
 .handle,
 .image-holder,
-.image {
+.image,
+.image img {
   border-radius: 6px;
   overflow: hidden;
 }

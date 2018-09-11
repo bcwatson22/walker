@@ -1,6 +1,5 @@
 <template>
   <section class="page transformations">
-    <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image">
     <h1>Transformations</h1>
     <article class="text">
       <p>Sometimes it's hard to imagine how much difference there is from the start to the end of a job!</p>
