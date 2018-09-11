@@ -1,13 +1,11 @@
 <template>
   <section class="page contact">
-    <!-- <img src="./../../assets/images/global/trowel.svg" class="trowel" alt="Trowel image"> -->
-    <div class="content">
+    <div class="content" :class="formSent ? 'form-sent' : ''">
       <article class="text">
         <h1>Contact</h1>
         <div v-if="!formSent" class="contact-content">
           <p>All jobs considered.</p>
           <p>For more information or to request a no-obligation quote please fill in the following form:</p>
-          <!-- <h3><a href="mailto:bakewellplastering@aol.co.uk">bakewellplastering@aol.co.uk</a></h3> -->
           <form id="contactform" action="//formspree.io/bcwatson22@gmail.com" method="POST">
             <fieldset>
               <div class="input">
@@ -47,6 +45,7 @@
         <div v-if="formSent" class="contact-content">
           <h2>Thanks for your enquiry.</h2>
           <h3>Bakewell Plastering will be in touch.</h3>
+          <!-- <img src="./../../assets/images/global/trowel-right.svg" class="trowel" alt="Trowel image"> -->
         </div>
       </article>
       <article class="image">

@@ -1,13 +1,11 @@
 <template>
-  <!-- <nav> -->
-    <ul>
-      <li><a href="/" @click.prevent="closeAndGo($event)">Home</a></li>
-      <li><a href="/services" @click.prevent="closeAndGo($event)">Services</a></li>
-      <li><a href="/bio" @click.prevent="closeAndGo($event)">Bio</a></li>
-      <li><a href="/transformations" @click.prevent="closeAndGo($event)">Transformations</a></li>
-      <li><a href="/contact" @click.prevent="closeAndGo($event)">Contact</a></li>
-    </ul>
-  <!-- </nav> -->
+  <ul>
+    <li><a href="/" @click.prevent="closeAndGo($event)">Home</a></li>
+    <li><a href="/services" @click.prevent="closeAndGo($event)">Services</a></li>
+    <li><a href="/bio" @click.prevent="closeAndGo($event)">Bio</a></li>
+    <li><a href="/transformations" @click.prevent="closeAndGo($event)">Transformations</a></li>
+    <li><a href="/contact" @click.prevent="closeAndGo($event)">Contact</a></li>
+  </ul>
 </template>
 
 <script>

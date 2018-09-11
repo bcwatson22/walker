@@ -27,23 +27,18 @@ body {
 main {
   padding: 0 24px 24px;
   position: relative;
-
-  // > * {
-  //   margin-bottom: 60px;
-  // }
 }
 
 .page {
-  // margin-bottom: 72px;
   position: relative;
 
   .trowel {
-    position: absolute;
-    top: 0;
-    right: -275px;
+    // position: absolute;
+    // top: 0;
+    // right: -275px;
     height: 500px;
     width: 275px;
-    display: none;
+    // display: none;
   }
 }
 
@@ -51,32 +46,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  // align-items: center;
 
   .text {
-    // display: flex;
-    // flex-wrap: wrap;
-    // flex-direction: column;
-    // justify-content: flex-start;
-    // height: 100%;
-    //
-    // * {
-    //   width: 100%;
-    // }
-    //
-    // h2 {
-    //   // margin-bottom: auto;
-    //   align-self: flex-start;
-    // }
-    // ul {
-    //   margin-top: 15px;
-    //   padding-left: 15px;
-    //
-    //   li {
-    //     list-style: circle;
-    //   }
-    // }
-
     p,
     h3,
     li {
@@ -85,20 +56,13 @@ main {
       }
     }
   }
-
-  .image {
-    // background: $silver;
-  }
 }
 
 .text,
 .image {
   width: calc(50% - 24px);
+  position: relative;
 }
-
-// .text {
-//   margin-bottom: 36px;
-// }
 
 .splash,
 .dragdealer,

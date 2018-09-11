@@ -1,12 +1,10 @@
 <template>
   <article class="transformation">
     <div class="image-holder">
-      <!-- <img :src="require('./../../assets/images/transformations/' + initial + '.jpg')" alt="Before image" class="initial"> -->
       <v-lazy-image :src="require('./../../assets/images/transformations/' + initial + '-full.jpg')" :src-placeholder="require('./../../assets/images/transformations/' + initial + '-thumb.jpg')" alt="Before image" class="initial"></v-lazy-image>
       <img :src="require('./../../assets/images/transformations/' + reveal + '.jpg')" alt="After image" class="reveal">
     </div>
     <div :id="'slider-' + initial.substring(0, 1)" class="dragdealer">
-      <!-- <div class="handle"><span>Handle</span></div> -->
       <div class="handle">Handle</div>
     </div>
   </article>

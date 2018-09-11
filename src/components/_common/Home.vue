@@ -58,7 +58,6 @@
   @import './../../assets/styles/sass/_mixins.scss';
 
   .splash {
-    // background: $silver;
     background: #000;
     position: relative;
 
