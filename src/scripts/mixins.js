@@ -48,7 +48,7 @@ export default {
 
     updateTitleMeta: function (newTitle, newDescription) {
 
-      if (newTitle) document.title = newTitle + ' // Billy Watson';
+      if (newTitle) document.title =  newTitle + ' | Bakewell Plastering';
 
       if (newDescription) {
 

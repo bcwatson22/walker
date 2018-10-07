@@ -1,14 +1,12 @@
 <template>
   <footer class="group">
-    <section class="small-print">
-      <div class="small-print">
-        <small>&copy;2018. All rights reserved.</small>
-        <small>Website by <a href="http://www.billywatson.net">billywatson.net</a>.</small>
-      </div>
+    <section>
+      <small>&copy;2018. All rights reserved.</small>
+      <small>Website by <a href="http://www.billywatson.net" target="_blank">billywatson.net</a>.</small>
     </section>
-    <router-link to="/projects" class="logo">
+    <a href="http://www.billywatson.net" class="logo button" target="_blank">
       <img src="./../../assets/images/global/bw-logo-black.svg" alt="Billy Watson logo">
-    </router-link>
+    </a>
   </footer>
 </template>
 
@@ -43,13 +41,13 @@
 
   @media screen and (max-width: 900px) {
     footer {
-      padding: 10px 20px 20px;
+      padding: 12px 24px 24px;
     }
   }
 
   @media screen and (max-width: 450px) {
     footer {
-      padding: 0 10px 20px;
+      padding: 0 12px 24px;
     }
   }
 </style>

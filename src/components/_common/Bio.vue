@@ -16,12 +16,19 @@
 </template>
 
 <script>
+  import mixins from './../../scripts/mixins.js';
   import VLazyImage from 'v-lazy-image';
 
   export default {
     name: 'Bio',
     components: {
       VLazyImage
+    },
+    mixins: [mixins],
+    mounted () {
+
+      this.updateTitleMeta('Bio');
+
     }
   }
 </script>

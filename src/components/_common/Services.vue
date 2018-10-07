@@ -28,12 +28,19 @@
 </template>
 
 <script>
+  import mixins from './../../scripts/mixins.js';
   import VLazyImage from 'v-lazy-image';
 
   export default {
     name: 'Services',
     components: {
       VLazyImage
+    },
+    mixins: [mixins],
+    mounted () {
+
+      this.updateTitleMeta('Services');
+
     }
   }
 </script>

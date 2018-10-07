@@ -6,7 +6,7 @@
         <iframe v-if="showPlayer" src="https://player.vimeo.com/video/282563026" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>
       </span>
       <v-lazy-image :src="require('./../../assets/images/pages/home-full.jpg')" :src-placeholder="require('./../../assets/images/pages/home-thumb.jpg')" alt="Completed project"></v-lazy-image>
-      <button class="icon play" @click.self="loadVideo()">Play</button>
+      <button class="icon play button" @click.self="loadVideo()">Play</button>
     </article>
   </section>
 </template>
@@ -17,10 +17,10 @@
 
   export default {
     name: 'Home',
-    mixins: [mixins],
     components: {
       VLazyImage
     },
+    mixins: [mixins],
     data () {
       return {
         showPlayer: false,
@@ -47,7 +47,7 @@
     },
     mounted () {
 
-      // this.updateTitleMeta('Home');
+      this.updateTitleMeta('Home');
 
     }
   }

@@ -24,6 +24,10 @@ body {
   position: relative;
 }
 
+.wrapper {
+  padding-top: 24px;
+}
+
 main {
   padding: 0 24px 24px;
   position: relative;
@@ -84,15 +88,24 @@ main {
   position: relative;
   will-change: opacity, transform;
 
-  &:hover {
-    opacity: 0.9;
-  }
-
-  &:active {
-    opacity: 1;
-  }
-
   &.play {
     background: url('./../../assets/images/global/icons/video-circle.svg') 50% 50% no-repeat;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0 12px 24px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .text,
+  .image {
+    width: 100%;
+  }
+
+  .text {
+    margin-bottom: 24px;
   }
 }

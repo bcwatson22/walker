@@ -11,7 +11,7 @@
 
       <Footer :year="copyrightYear"/>
     </section>
-    <!-- <CookieBanner v-if="cookieBanner"/> -->
+    <CookieBanner v-if="cookieBanner"/>
   </div>
 </template>
 
@@ -52,7 +52,7 @@
       },
       checkForCookie: function () {
 
-        let showBanner = (this.$cookie.get('billy-watson')) ? false : true;
+        let showBanner = (this.$cookie.get('bakewell-plastering')) ? false : true;
 
         return showBanner;
 
@@ -66,17 +66,17 @@
     },
     mounted () {
 
-      // let $root = document.getElementById('app'),
-      //     $banner = $root.querySelectorAll('.cookie-banner')[0],
-      //     height = '0';
-      //
-      // if ($banner) {
-      //
-      //   height = $banner.offsetHeight.toString();
-      //
-      //   $root.style.paddingBottom = height + 'px';
-      //
-      // }
+      let $root = document.getElementById('app'),
+          $banner = $root.querySelectorAll('.cookie-banner')[0],
+          height = '0';
+
+      if ($banner) {
+
+        height = $banner.offsetHeight.toString();
+
+        $root.style.paddingBottom = height + 'px';
+
+      }
 
     }
   }

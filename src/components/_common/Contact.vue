@@ -6,7 +6,7 @@
         <div v-if="!formSent" class="contact-content">
           <p>All jobs considered.</p>
           <p>For more information or to request a no-obligation quote please fill in the following form:</p>
-          <form id="contactform" action="//formspree.io/bcwatson22@gmail.com" method="POST">
+          <form id="contactform" action="//formspree.io/bakewellplastering@aol.co.uk" method="POST">
             <fieldset>
               <div class="input">
                 <input type="text" name="name" required>
@@ -45,7 +45,6 @@
         <div v-if="formSent" class="contact-content">
           <h2>Thanks for your enquiry.</h2>
           <h3>Bakewell Plastering will be in touch.</h3>
-          <!-- <img src="./../../assets/images/global/trowel-right.svg" class="trowel" alt="Trowel image"> -->
         </div>
       </article>
       <article class="image">
@@ -56,6 +55,7 @@
 </template>
 
 <script>
+  import mixins from './../../scripts/mixins.js';
   import VLazyImage from 'v-lazy-image';
 
   export default {
@@ -65,6 +65,12 @@
     },
     components: {
       VLazyImage
+    },
+    mixins: [mixins],
+    mounted () {
+
+      this.updateTitleMeta('Contact');
+
     }
   }
 </script>

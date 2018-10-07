@@ -1,9 +1,9 @@
 <template>
   <section class="cookie-banner">
     <div class="inner">
-      <span class="icon full-size cookie">Cookie</span>
+      <span class="icon cookie">Cookie</span>
       <p>This site uses cookies to give you a sweet user experience.</p>
-      <button class="icon full-size close" @click="dismissBanner($event)">Info</button>
+      <button class="icon close button" @click="dismissBanner($event)">Info</button>
     </div>
   </section>
 </template>
@@ -19,7 +19,7 @@
 
         let $root = document.getElementById('app');
 
-        this.$cookie.set('billy-watson', 'dismissed', 365);
+        this.$cookie.set('bakewell-plastering', 'dismissed', 365);
 
         this.toggleElement(event, '#app', '.cookie-banner');
 
@@ -37,18 +37,13 @@
 </script>
 
 <style lang="scss" scoped>
+  @import './../../assets/styles/sass/_variables.scss';
+
   .cookie-banner {
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(39, 45, 62, 0.98);
     position: fixed;
     bottom: 0;
-  }
-
-  .inner {
-    display: flex;
-    align-items: center;
-    padding: 20px 80px 20px 60px;
-    max-width: 1160px;
     opacity: 1;
     transform: translateY(0%);
     will-change: opacity, transform;
@@ -60,18 +55,40 @@
     }
   }
 
+  .inner {
+    display: flex;
+    align-items: center;
+    padding: 18px 72px 18px 72px;
+    max-width: 1150px;
+    opacity: 1;
+    transform: translateY(0%);
+    will-change: opacity, transform;
+    transition: all 0.3s ease;
+    color: $silver;
+
+    &.toggle {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
   .icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
 
     &.cookie {
-      left: 20px;
-      background: transparent;
+      left: 24px;
+      background: url('./../../assets/images/global/icons/cookie.svg') 50% 50% no-repeat;
+      background-size: 80% 80%;
     }
 
     &.close {
-      right: 30px;
+      right: 24px;
+      background: url('./../../assets/images/global/icons/close.svg') 50% 50% no-repeat;
+      background-size: 90% 90%;
     }
   }
 
@@ -79,40 +96,18 @@
     margin: 0;
   }
 
-  @media screen and (max-width: 900px) {
-    .inner {
-      padding: 20px 70px 20px 50px;
-    }
-
-    .icon {
-      &.cookie {
-        left: 10px;
-      }
-
-      &.close {
-        right: 20px;
-      }
-    }
-  }
-
   @media screen and (max-width: 500px) {
     .inner {
-      padding: 10px 70px 10px 50px;
-    }
-  }
-
-  @media screen and (max-width: 450px) {
-    .inner {
-      padding: 20px 65px 20px 45px;
+      padding: 10px 60px 10px 60px;
     }
 
     .icon {
       &.cookie {
-        left: 5px;
+        left: 12px;
       }
 
       &.close {
-        right: 15px;
+        right: 12px;
       }
     }
   }

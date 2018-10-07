@@ -1,10 +1,10 @@
 <template>
   <ul>
-    <li><a href="/" @click.prevent="closeAndGo($event)">Home</a></li>
-    <li><a href="/services" @click.prevent="closeAndGo($event)">Services</a></li>
-    <li><a href="/bio" @click.prevent="closeAndGo($event)">Bio</a></li>
-    <li><a href="/transformations" @click.prevent="closeAndGo($event)">Transformations</a></li>
-    <li><a href="/contact" @click.prevent="closeAndGo($event)">Contact</a></li>
+    <li><a href="/" class="home" @click.prevent="closeAndGo($event)">Home</a></li>
+    <li><a href="/services" class="services" @click.prevent="closeAndGo($event)">Services</a></li>
+    <li><a href="/bio" class="bio" @click.prevent="closeAndGo($event)">Bio</a></li>
+    <li><a href="/transformations" class="transformations" @click.prevent="closeAndGo($event)">Transformations</a></li>
+    <li><a href="/contact" class="contact" @click.prevent="closeAndGo($event)">Contact</a></li>
   </ul>
 </template>
 
@@ -47,6 +47,40 @@
 
       &:active {
         text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    li a {
+      text-indent: -99999rem;
+      width: 40px;
+      height: 40px;
+      display: block;
+
+      &.home {
+        background: url('./../../assets/images/global/icons/home.svg') 50% 50% no-repeat;
+        background-size: 90% 90%;
+      }
+
+      &.services {
+        background: url('./../../assets/images/global/icons/services.svg') 50% 50% no-repeat;
+        background-size: 90% 90%;
+      }
+
+      &.bio {
+        background: url('./../../assets/images/global/icons/bio.svg') 50% 50% no-repeat;
+        background-size: 90% 90%;
+      }
+
+      &.transformations {
+        background: url('./../../assets/images/global/icons/transformations.svg') 50% 50% no-repeat;
+        background-size: 90% 90%;
+      }
+
+      &.contact {
+        background: url('./../../assets/images/global/icons/contact.svg') 50% 50% no-repeat;
+        background-size: 90% 90%;
       }
     }
   }

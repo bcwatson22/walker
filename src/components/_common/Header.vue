@@ -1,12 +1,12 @@
 <template>
   <header class="group">
-    <router-link to="/projects" class="logo">
-      <img src="./../../assets/images/global/logo-horizontal.svg" alt="Bakewell Plastering logo">
-    </router-link>
     <nav>
-      <button class="menu-toggle" @click="toggleElement($event, 'body', 'header')"><span>Menu</span></button>
+      <button class="menu-toggle button" @click="toggleElement($event, 'body', 'header')"><span>Menu</span></button>
       <Nav/>
     </nav>
+    <router-link to="/" class="logo button">
+      <img src="./../../assets/images/global/logo-horizontal.svg" alt="Bakewell Plastering logo">
+    </router-link>
   </header>
 </template>
 
@@ -27,15 +27,21 @@
   @import './../../assets/styles/sass/_variables.scss';
 
   header {
-    padding: 24px 24px 0;
+    padding: 0 24px;
     margin-bottom: 24px;
+    position: relative;
   }
 
   nav {
-    float: left;
+    // float: left;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    width: calc(100% - 36px);
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
 
     ul {
       padding: 24px 0;
@@ -57,13 +63,20 @@
   }
 
   .logo {
+    position: relative;
     display: block;
     width: calc(50% - 24px);
     float: right;
     transition: all 0.5s ease;
+    z-index: 5;
 
     .toggle & {
       opacity: 0.1;
+      z-index: -1;
+    }
+
+    &:hover {
+      transition: none;
     }
   }
 
@@ -125,6 +138,56 @@
           transform: rotate(-270deg);
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .logo {
+      width: calc(70% - 24px);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    nav ul {
+      width: calc(100% - 84px);
+      left: 60px;
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    nav ul {
+      width: calc(100% - 96px);
+      left: 84px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    header {
+      padding: 0 12px;
+    }
+
+    nav {
+      width: calc(100% - 24px);
+      left: 12px;
+      // top: 0;
+      // transform: none;
+
+      ul {
+        width: calc(100% - 84px);
+      }
+    }
+
+    .logo {
+      width: calc(80% - 24px);
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    nav ul {
+      width: calc(100% - 72px);
+      left: 60px;
     }
   }
 </style>

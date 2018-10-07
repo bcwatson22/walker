@@ -25,6 +25,11 @@
       Transformation
     },
     mixins: [mixins],
+    mounted () {
+
+      this.updateTitleMeta('Transformations');
+
+    }
   }
 </script>
 
@@ -40,6 +45,16 @@
       &:last-of-type {
         margin-bottom: 0;
       }
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .text {
+      margin-bottom: 0;
+    }
+
+    .transformation {
+      width: 100%;
     }
   }
 </style>
