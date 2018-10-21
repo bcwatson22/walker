@@ -21,7 +21,7 @@
         </ul>
       </article>
       <article class="image">
-        <v-lazy-image :src="require('./../../assets/images/pages/services-full.jpg')" :src-placeholder="require('./../../assets/images/pages/services-thumb.jpg')" alt="Completed project"></v-lazy-image>
+        <v-lazy-image :src="require('./../../assets/images/pages/services-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/services-10.jpg')" alt="Completed project"></v-lazy-image>
       </article>
     </div>
   </section>

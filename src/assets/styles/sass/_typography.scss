@@ -208,6 +208,7 @@ form {
       color: #fff;
       cursor: pointer;
       // margin-top: 24px;
+      -webkit-appearance: none;
 
       &:hover {
         background: $dark-blue;
@@ -231,6 +232,7 @@ form {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background: #fff;
 
     option[disabled] {
       color: #777;

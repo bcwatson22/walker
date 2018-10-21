@@ -1,10 +1,11 @@
 <template>
   <article class="transformation">
     <div class="image-holder">
-      <v-lazy-image :src="require('./../../assets/images/transformations/' + initial + '-full.jpg')" :src-placeholder="require('./../../assets/images/transformations/' + initial + '-thumb.jpg')" alt="Before image" class="initial"></v-lazy-image>
-      <img :src="require('./../../assets/images/transformations/' + reveal + '.jpg')" alt="After image" class="reveal">
+      <v-lazy-image :src="require('./../../assets/images/pages/transformation-' + start + '-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/transformation-' + start + '-10.jpg')" alt="Before image" class="start"></v-lazy-image>
+      <!-- <img v-if="progress" :src="require('./../../assets/images/pages/transformation-' + progress + '-1500.jpg')" alt="Progress image" class="progress"> -->
+      <img :src="require('./../../assets/images/pages/transformation-' + finish + '-1500.jpg')" alt="After image" class="finish">
     </div>
-    <div :id="'slider-' + initial.substring(0, 1)" class="dragdealer">
+    <div :id="'slider-' + start.substring(0, 1)" class="dragdealer">
       <div class="handle">Handle</div>
     </div>
   </article>
@@ -18,8 +19,9 @@
   export default {
     name: 'Transformation',
     props: {
-      initial: String,
-      reveal: String
+      start: String,
+      // progress: String,
+      finish: String
     },
     components: {
       VLazyImage
@@ -27,18 +29,31 @@
     mixins: [mixins],
     mounted () {
 
-      let slider = 'slider-' + this.initial.substring(0, 1),
+      let slider = 'slider-' + this.start.substring(0, 1),
           $slider = document.getElementById(slider),
           $parent = this.getClosest($slider, '.transformation'),
-          $reveal = $parent.querySelectorAll('.reveal')[0];
+          // $progress = $parent.querySelectorAll('.progress')[0],
+          $finish = $parent.querySelectorAll('.finish')[0];
 
       new Dragdealer(slider, {
 
         animationCallback: function (x) {
 
-          $reveal.style.opacity = x.toFixed(2);
+          // if ($progress) {
+          //
+          //   if (x <= 0.5) {
+          //     x = x * 2;
+          //     $progress.style.opacity = x.toFixed(2);
+          //   } else {
+          //     // x = x / 2;
+          //     $finish.style.opacity = x.toFixed(2);
+          //   }
+          //
+          // } else {
 
-          (x > 0.1) ? $slider.classList.add('touched') : $slider.classList.remove('touched');
+            $finish.style.opacity = x.toFixed(2);
+
+          // }
 
         }
 
@@ -55,6 +70,12 @@
   .transformation {
     width: calc(50% - 24px);
     margin-top: 48px;
+
+    .image & {
+      width: 100%;
+      margin: 0;
+      padding-bottom: 14px;
+    }
   }
 
   .image-holder {
@@ -62,7 +83,8 @@
     margin-bottom: 24px;
   }
 
-  .reveal {
+  .progress,
+  .finish {
     position: absolute;
     top: 0;
     opacity: 0;
@@ -72,7 +94,7 @@
   .dragdealer {
     background: $silver;
     position: relative;
-    height: 12px;
+    height: 6px;
     overflow: visible;
     border-radius: 6px;
 
@@ -99,10 +121,10 @@
   .handle {
     text-indent: -99999rem;
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: relative;
-    top: -14px;
+    top: -12px;
     background: $light-blue;
     cursor: pointer;
 

@@ -12,6 +12,7 @@ body {
 
 body {
   background: url('./../../assets/images/global/texture-crop.jpg') top left repeat;
+  background-size: 250px 150px;
   color: #000;
 }
 
@@ -93,12 +94,6 @@ main {
   }
 }
 
-@media screen and (max-width: 500px) {
-  main {
-    padding: 0 12px 24px;
-  }
-}
-
 @media screen and (max-width: 770px) {
   .text,
   .image {
@@ -107,5 +102,11 @@ main {
 
   .text {
     margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0 12px 24px;
   }
 }

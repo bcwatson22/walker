@@ -1,12 +1,23 @@
 <template>
-  <section class="page Home">
+  <section class="page home">
     <h1 class="hidden">Home</h1>
     <article class="splash" :class="[{ 'loading': showPlayer, 'embedded': playerReady }]">
       <span class="iframe-holder">
-        <iframe v-if="showPlayer" src="https://player.vimeo.com/video/282563026" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>
+        <iframe v-if="showPlayer" src="https://player.vimeo.com/video/295596849" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>
       </span>
-      <v-lazy-image :src="require('./../../assets/images/pages/home-full.jpg')" :src-placeholder="require('./../../assets/images/pages/home-thumb.jpg')" alt="Completed project"></v-lazy-image>
+      <v-lazy-image :src="require('./../../assets/images/pages/home-splash-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-splash-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
       <button class="icon play button" @click.self="loadVideo()">Play</button>
+    </article>
+    <div class="content">
+      <article class="image">
+        <v-lazy-image :src="require('./../../assets/images/pages/home-working-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-working-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
+      </article>
+      <article class="image">
+        <v-lazy-image :src="require('./../../assets/images/pages/home-fireplace-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-fireplace-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
+      </article>
+    </div>
+    <article class="splash">
+      <v-lazy-image :src="require('./../../assets/images/pages/home-pano-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-pano-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
     </article>
   </section>
 </template>
@@ -117,6 +128,20 @@
       iframe {
         transform: translateY(0);
         opacity: 1;
+      }
+    }
+  }
+
+  .content .image {
+    margin: 48px 0;
+  }
+
+  @media screen and (max-width: 770px) {
+    .content .image {
+      margin: 24px 0;
+
+      &:nth-of-type(2) {
+        margin-top: 0
       }
     }
   }

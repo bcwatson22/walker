@@ -9,7 +9,7 @@
         <p>James likes to go cycling in his spare time. He shaves his legs to avoid 'road rash'. He was always into mountain biking but then he went full roadie. He has now got a mountain bike again and loves Strava. It is a Cube Stereo. It isn't as good as his friend Billy's but he doesn't care.</p>
       </article>
       <article class="image">
-        <v-lazy-image :src="require('./../../assets/images/pages/bio-full.jpg')" :src-placeholder="require('./../../assets/images/pages/bio-thumb.jpg')" alt="James Walker portrait"></v-lazy-image>
+        <v-lazy-image :src="require('./../../assets/images/pages/bio-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/bio-10.jpg')" alt="James Walker portrait"></v-lazy-image>
       </article>
     </div>
   </section>

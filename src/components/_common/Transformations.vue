@@ -1,15 +1,20 @@
 <template>
   <section class="page transformations">
-    <h1>Transformations</h1>
-    <article class="text">
-      <p>Sometimes it's hard to imagine how much difference there is from the start to the end of a job!</p>
-      <p>Click and drag or swipe across the blue handles on each of the sliders below to see before and after photos for various jobs undertaken by Bakewell Plastering.</p>
-    </article>
+    <!-- <h1>Transformations</h1> -->
+    <div class="content">
+      <article class="text">
+        <h1>Transformations</h1>
+        <p>Sometimes it's hard to imagine how much difference there is from the start to the end of a job!</p>
+        <p>Click and drag or swipe across the blue handles on each of the sliders below to see before and after photos for various jobs undertaken by Bakewell Plastering.</p>
+      </article>
+      <article class="image">
+        <Transformation :start="'1-start'" :finish="'1-finish'"/>
+      </article>
+    </div>
     <article class="sliders">
-      <Transformation :initial="'1-initial'" :reveal="'1-reveal'"/>
-      <Transformation :initial="'3-initial'" :reveal="'3-reveal'"/>
-      <Transformation :initial="'2-initial'" :reveal="'2-reveal'"/>
-      <Transformation :initial="'4-initial'" :reveal="'4-reveal'"/>
+      <!-- <Transformation :start="'1-start'" :progress="'1-progress'" :finish="'1-finish'"/> -->
+      <Transformation :start="'2-start'" :finish="'2-progress'"/>
+      <Transformation :start="'3-start'" :finish="'3-finish'"/>
     </article>
   </section>
 </template>
@@ -40,6 +45,10 @@
     justify-content: space-between;
   }
 
+  h1 {
+    margin-top: 30px;
+  }
+
   .text {
     p {
       &:last-of-type {
@@ -48,13 +57,22 @@
     }
   }
 
+  .image {
+    overflow: auto;
+  }
+
   @media screen and (max-width: 770px) {
+    h1 {
+      margin-top: 0;
+    }
+
     .text {
-      margin-bottom: 0;
+      // margin-bottom: 0;
     }
 
     .transformation {
       width: 100%;
+      margin: 36px 0 24px;
     }
   }
 </style>

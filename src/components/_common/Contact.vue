@@ -48,7 +48,7 @@
         </div>
       </article>
       <article class="image">
-        <v-lazy-image :src="require('./../../assets/images/pages/contact-full.jpg')" :src-placeholder="require('./../../assets/images/pages/contact-thumb.jpg')" alt="Bakewell Plastering van"></v-lazy-image>
+        <v-lazy-image :src="require('./../../assets/images/pages/contact-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/contact-10.jpg')" alt="Bakewell Plastering van"></v-lazy-image>
       </article>
     </div>
   </section>

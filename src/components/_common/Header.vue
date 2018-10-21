@@ -50,14 +50,15 @@
       width: calc(100% - 124px);
       left: 100px;
       position: absolute;
+      top: 50%;
       opacity: 0;
-      transform: translateY(-100%);
+      transform: translateY(-50%);
       transition: opacity 0.5s ease;
       will-change: opacity, transform;
 
       .toggle & {
         opacity: 1;
-        transform: translateY(0);
+        // transform: translateY(0);
       }
     }
   }
