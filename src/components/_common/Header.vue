@@ -76,8 +76,10 @@
       z-index: -1;
     }
 
-    &:hover {
-      transition: none;
+    @media screen and (pointer: fine) {
+      &:hover {
+        transition: none;
+      }
     }
   }
 

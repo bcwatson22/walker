@@ -49,13 +49,15 @@ a {
   color: $light-blue;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
+  @media screen and (pointer: fine) {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
 
-  &:active {
-    text-decoration: none;
+    &:active {
+      text-decoration: none;
+    }
   }
 }
 
@@ -68,14 +70,16 @@ button {
    }
 
    &.button {
-     will-change: opacity;
+     @media screen and (pointer: fine) {
+       will-change: opacity;
 
-     &:hover {
-       opacity: 0.8;
-     }
+       &:hover {
+         opacity: 0.8;
+       }
 
-     &:active {
-       opacity: 1;
+       &:active {
+         opacity: 1;
+       }
      }
    }
 }
@@ -210,13 +214,15 @@ form {
       // margin-top: 24px;
       -webkit-appearance: none;
 
-      &:hover {
-        background: $dark-blue;
-      }
+      @media screen and (pointer: fine) {
+        &:hover {
+          background: $dark-blue;
+        }
 
-      &:active {
-        background: $silver;
-        color: $dark-blue;
+        &:active {
+          background: $silver;
+          color: $dark-blue;
+        }
       }
     }
   }

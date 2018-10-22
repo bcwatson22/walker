@@ -1,9 +1,11 @@
 <template>
   <article class="transformation">
     <div class="image-holder">
-      <v-lazy-image :src="require('./../../assets/images/pages/transformation-' + start + '-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/transformation-' + start + '-10.jpg')" alt="Before image" class="start"></v-lazy-image>
+      <v-lazy-image :src="require('./../../assets/images/pages/transformation-' + start + '-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/transformation-' + start + '-10.jpg')" :srcset="require('./../../assets/images/pages/transformation-' + start + '-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/transformation-' + start + '-800.jpg') + ' 800w,' + require('./../../assets/images/pages/transformation-' + start + '-600.jpg') + ' 600w,' + require('./../../assets/images/pages/transformation-' + start + '-400.jpg') + ' 400w'"
+      sizes="(min-width: 771px) 50vw, 100vw" alt="Before image" class="start"></v-lazy-image>
       <!-- <img v-if="progress" :src="require('./../../assets/images/pages/transformation-' + progress + '-1500.jpg')" alt="Progress image" class="progress"> -->
-      <img :src="require('./../../assets/images/pages/transformation-' + finish + '-1500.jpg')" alt="After image" class="finish">
+      <img :src="require('./../../assets/images/pages/transformation-' + finish + '-1500.jpg')" :srcset="require('./../../assets/images/pages/transformation-' + finish + '-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/transformation-' + finish + '-800.jpg') + ' 800w,' + require('./../../assets/images/pages/transformation-' + finish + '-600.jpg') + ' 600w,' + require('./../../assets/images/pages/transformation-' + finish + '-400.jpg') + ' 400w'"
+      sizes="(min-width: 771px) 50vw, 100vw" alt="After image" class="finish">
     </div>
     <div :id="'slider-' + start.substring(0, 1)" class="dragdealer">
       <div class="handle">Handle</div>

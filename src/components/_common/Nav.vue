@@ -40,13 +40,15 @@
       padding: 12px 0;
       text-decoration: underline;
 
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
+      @media screen and (pointer: fine) {
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
 
-      &:active {
-        text-decoration: underline;
+        &:active {
+          text-decoration: underline;
+        }
       }
     }
   }

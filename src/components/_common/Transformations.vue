@@ -4,8 +4,9 @@
     <div class="content">
       <article class="text">
         <h1>Transformations</h1>
-        <p>Sometimes it's hard to imagine how much difference there is from the start to the end of a job!</p>
-        <p>Click and drag or swipe across the blue handles on each of the sliders below to see before and after photos for various jobs undertaken by Bakewell Plastering.</p>
+        <p>Sometimes it can be difficult to imagine how much difference there is from the start to the end of a job.</p>
+        <p>A lot can change during the plastering process, which makes visualising the transformation tricky.</p>
+        <p>Click and drag, slide or swipe the blue handles on each of the following sliders to see before and after photos for various jobs undertaken by Bakewell Plastering.</p>
       </article>
       <article class="image">
         <Transformation :start="'1-start'" :finish="'1-finish'"/>

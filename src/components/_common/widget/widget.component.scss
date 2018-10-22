@@ -31,10 +31,12 @@
     width: calc(60% - 24px);
   }
 
-  &:hover,
-  &:focus {
-    box-shadow: 2px 2px 4px 3px $border;
-    z-index: 2;
+  @media screen and (pointer: fine) {
+    &:hover,
+    &:focus {
+      box-shadow: 2px 2px 4px 3px $border;
+      z-index: 2;
+    }
   }
 
   &[ng-reflect-info],

@@ -114,12 +114,14 @@
     will-change: box-shadow;
     margin-bottom: 30px;
 
-    &:hover {
-      box-shadow: 0px 0px 5px 1px #fff;
+    @media screen and (pointer: fine) {
+      &:hover {
+        box-shadow: 0px 0px 5px 1px #fff;
 
-      .overlay {
-        opacity: 1;
-        transition: all 0.15s ease;
+        .overlay {
+          opacity: 1;
+          transition: all 0.15s ease;
+        }
       }
     }
   }
@@ -146,8 +148,10 @@
       width: calc(11.11% - 10px);
       position: relative;
 
-      &:hover:after {
-        opacity: 1;
+      @media screen and (pointer: fine) {
+        &:hover:after {
+          opacity: 1;
+        }
       }
     }
 

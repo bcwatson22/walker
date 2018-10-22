@@ -5,19 +5,24 @@
       <span class="iframe-holder">
         <iframe v-if="showPlayer" src="https://player.vimeo.com/video/295596849" width="640" height="363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen @load="iFrameLoaded()"></iframe>
       </span>
-      <v-lazy-image :src="require('./../../assets/images/pages/home-splash-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-splash-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
+      <v-lazy-image :src="require('./../../assets/images/pages/home-splash-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-splash-10.jpg')"
+      :srcset="require('./../../assets/images/pages/home-splash-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/home-splash-800.jpg') + ' 800w,' + require('./../../assets/images/pages/home-splash-600.jpg') + ' 600w,' + require('./../../assets/images/pages/home-splash-400.jpg') + ' 400w'"
+      sizes="100vw" alt="Bakewell Plastering project"></v-lazy-image>
       <button class="icon play button" @click.self="loadVideo()">Play</button>
     </article>
     <div class="content">
       <article class="image">
-        <v-lazy-image :src="require('./../../assets/images/pages/home-working-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-working-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
+        <v-lazy-image :src="require('./../../assets/images/pages/home-working-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-working-10.jpg')" :srcset="require('./../../assets/images/pages/home-working-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/home-working-800.jpg') + ' 800w,' + require('./../../assets/images/pages/home-working-600.jpg') + ' 600w,' + require('./../../assets/images/pages/home-working-400.jpg') + ' 400w'"
+        sizes="(min-width: 771px) 50vw, 100vw" alt="Bakewell Plastering project"></v-lazy-image>
       </article>
       <article class="image">
-        <v-lazy-image :src="require('./../../assets/images/pages/home-fireplace-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-fireplace-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
+        <v-lazy-image :src="require('./../../assets/images/pages/home-fireplace-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-fireplace-10.jpg')" :srcset="require('./../../assets/images/pages/home-fireplace-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/home-fireplace-800.jpg') + ' 800w,' + require('./../../assets/images/pages/home-fireplace-600.jpg') + ' 600w,' + require('./../../assets/images/pages/home-fireplace-400.jpg') + ' 400w'"
+        sizes="(min-width: 771px) 50vw, 100vw" alt="Bakewell Plastering project"></v-lazy-image>
       </article>
     </div>
     <article class="splash">
-      <v-lazy-image :src="require('./../../assets/images/pages/home-pano-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-pano-10.jpg')" alt="Bakewell Plastering project"></v-lazy-image>
+      <v-lazy-image :src="require('./../../assets/images/pages/home-pano-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/home-pano-10.jpg')" :srcset="require('./../../assets/images/pages/home-pano-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/home-pano-800.jpg') + ' 800w,' + require('./../../assets/images/pages/home-pano-600.jpg') + ' 600w,' + require('./../../assets/images/pages/home-pano-400.jpg') + ' 400w'"
+      sizes="100vw" alt="Bakewell Plastering project"></v-lazy-image>
     </article>
   </section>
 </template>
