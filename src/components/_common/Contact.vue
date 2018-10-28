@@ -24,9 +24,8 @@
                 <textarea name="message" required></textarea>
                 <label for="message">Brief description of work</label>
               </div>
-              <div class="input">
+              <!-- <div class="input">
                 <select name="budget" required>
-                  <!-- <option value="" selected disabled>Rough budget</option> -->
                   <option value="" selected disabled></option>
                   <option value="Less than £500">Less than £500</option>
                   <option value="£500-1000">£500-1000</option>
@@ -34,7 +33,7 @@
                   <option value="£5000+">£5000+</option>
                 </select>
                 <label for="budget">Rough budget</label>
-              </div>
+              </div> -->
               <input type="hidden" name="_subject" value="Website quote enquiry">
               <input type="hidden" name="_next" value="/contact?form=success">
               <input type="text" name="_gotcha" class="honeypot">

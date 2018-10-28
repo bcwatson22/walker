@@ -3,10 +3,10 @@
     <div class="content">
       <article class="text">
         <h1>Bio</h1>
-        <p>James Walker is a plasterer from Derbyshire. He grew up in Birchover and went to Lady Manners School. He was born in a barn and has a reyt shire accent. He has been plastering for donkeys' years and has a lot of experience.</p>
-        <p>He lives in Over Haddon. He has a lovely wife called Hannah. They got married in Over Haddon in summer 2016. The ceremony was in Over Haddon church and the shindig in the village hall. It was nice. Everyone had a lot of fun. It didn't rain.</p>
-        <p>They have two cats. The cats are soft and purr. They are friendly. One is called Walter and he wears socks. The other is called Polly and is scared of visitors.</p>
-        <p>James likes to go cycling in his spare time. He shaves his legs to avoid 'road rash'. He was always into mountain biking but then he went full roadie. He has now got a mountain bike again and loves Strava. It is a Cube Stereo. It isn't as good as his friend Billy's but he doesn't care.</p>
+        <p>Established in 2015, Bakewell Plastering has evolved from the multitude of projects that the Peak District has to offer and quickly affirmed itself as an honest, reliable and clean business within the local building industry.</p>
+        <p>James Walker, the owner of Bakewell Plastering, trained with a local firm straight after leaving Lady Manners School; over 10 years later he has secured a trusted reputation as a plastering and damp proofing expert in Derbyshire.</p>
+        <p>Now the business regularly completes jobs as a plastering team.</p>
+        <p><em>"We are delighted by the high-quality finish of the plastering and we greatly appreciate the careful and tidy manner in which the work was efficiently carried out. We should certainly be pleased to use your expert service on future occasions."</em><strong>Paul</strong>, Buxton</p>
       </article>
       <article class="image">
         <v-lazy-image :src="require('./../../assets/images/pages/bio-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/bio-10.jpg')" :srcset="require('./../../assets/images/pages/bio-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/bio-800.jpg') + ' 800w,' + require('./../../assets/images/pages/bio-600.jpg') + ' 600w,' + require('./../../assets/images/pages/bio-400.jpg') + ' 400w'"

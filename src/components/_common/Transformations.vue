@@ -46,9 +46,9 @@
     justify-content: space-between;
   }
 
-  h1 {
-    margin-top: 30px;
-  }
+  // h1 {
+  //   margin-top: 30px;
+  // }
 
   .text {
     p {
@@ -63,9 +63,9 @@
   }
 
   @media screen and (max-width: 770px) {
-    h1 {
-      margin-top: 0;
-    }
+    // h1 {
+    //   margin-top: 0;
+    // }
 
     .text {
       // margin-bottom: 0;
