@@ -9,7 +9,8 @@
         <p>One of the business' priorities is to help achieve your desired interior. Whether it's just smooth, straight lines or dramatic curves and uneven, coarse wall surfaces, Bakewell Plastering will help to realise the anticipated finish.</p>
       </article>
       <article class="image">
-        <v-lazy-image :src="require('./../../assets/images/pages/services-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/services-10.jpg')" alt="Completed project"></v-lazy-image>
+        <v-lazy-image :src="require('./../../assets/images/pages/services-1500.jpg')" :src-placeholder="require('./../../assets/images/pages/services-10.jpg')" :srcset="require('./../../assets/images/pages/services-1200.jpg') + ' 1200w,' + require('./../../assets/images/pages/services-800.jpg') + ' 800w,' + require('./../../assets/images/pages/services-600.jpg') + ' 600w,' + require('./../../assets/images/pages/services-400.jpg') + ' 400w'"
+        sizes="(min-width: 771px) 50vw, 100vw" alt="Completed project"></v-lazy-image>
       </article>
     </div>
   </section>
